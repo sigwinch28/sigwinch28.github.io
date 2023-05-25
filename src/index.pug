@@ -1,0 +1,66 @@
+mixin bioicon(color)
+  div(class="flex-none w-6 mg:w-10 lg:w-14 rounded-full p-1 lg:p-2")&attributes(attributes)
+    block
+
+mixin bioitem
+  div(class="flex flex-row items-center gap-2 lg:gap-4 text-base lg:text-xl group")
+    block
+
+mixin biotext
+  div(class="flex-none inline-block text-bold text-base md:text-lg lg:text-2xl")
+    block
+
+mixin bio
+  section(id="bio", class="flex flex-col items-start gap-2 lg:gap-4")
+    block
+
+doctype html
+html(lang="en")
+  head
+    link(rel="stylesheet", href="style.css")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  body
+    main(class="min-h-screen min-w-screen box-border pt-8 dark:bg-black dark:text-white selection:text-white selection:bg-black dark:selection:text-black dark:selection:bg-white")
+      header(class="border-t-8 border-black dark:border-white box-border p-4 font-bold")
+        h1(class="text-6xl") Joe Harrison
+        h2(class="text-4xl") Functional Programmer, Software Engineer, Train Nerd
+      div(class="px-4")
+        +bio
+          a(href="https://en.pronouns.page/are/he/him", class="hover:underline")
+            +bioitem
+              +bioicon(class="bg-green-500 group-hover:bg-green-400")
+                include ../node_modules/heroicons/24/outline/tag.svg
+              +biotext
+                span he/him
+          a(href="https://www.openstreetmap.org/relation/65606", class="hover:underline")
+            +bioitem
+              +bioicon(class="bg-orange-500 group-hover:bg-orange-400")
+                include ../node_modules/heroicons/24/outline/map-pin.svg
+              +biotext
+                span London, UK
+          a(href="mailto:joe@sigwinch.uk", class="hover:underline") 
+            +bioitem
+              +bioicon(class="bg-blue-500 group-hover:bg-blue-400")
+                include ../node_modules/heroicons/24/outline/at-symbol.svg
+              +biotext
+                span joe@sigwinch.uk
+          a(href="https://github.com/sigwinch28", class="hover:underline") 
+            +bioitem
+              +bioicon(class="bg-yellow-400 group-hover:bg-yellow-300")
+                include ../node_modules/heroicons/24/outline/code-bracket.svg
+              +biotext
+                span sigwinch28
+          a(href="https://keys.openpgp.org/search?q=joe@sigwinch.uk", class="hover:underline") 
+            +bioitem
+              +bioicon(class="bg-pink-500 group-hover:bg-pink-400")
+                include ../node_modules/heroicons/24/outline/key.svg
+              +biotext
+                span 62F9 CC13 8DD7 1788
+
+    footer(class="bg-black dark:bg-white text-white dark:text-black selection:text-black selection:bg-white dark:selection:text-white dark:selection:bg-black p-2 lg:p-4")
+      p.
+        🚇 Inspired by the design of New York City Subway signs.
+      p.
+        🖥️ Written in Pug. 🎨 Styled with Tailwind CSS. 🚇 Icons by Heroicons. 📦 Bundled with Parcel.
+
+    //- script(type="module", src="index.js")
