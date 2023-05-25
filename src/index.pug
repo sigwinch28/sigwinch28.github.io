@@ -27,36 +27,42 @@ html(lang="en")
         h2(class="text-4xl") Functional Programmer, Software Engineer, Train Nerd
       div(class="px-4")
         +bio
-          a(href="https://en.pronouns.page/are/he/him", class="hover:underline")
+          a(title="Pronouns" href="https://en.pronouns.page/are/he/him", class="hover:underline")
             +bioitem
               +bioicon(class="bg-green-500 group-hover:bg-green-400")
                 include ../node_modules/heroicons/24/outline/tag.svg
               +biotext
                 span he/him
-          a(href="https://www.openstreetmap.org/relation/65606", class="hover:underline")
+          a(title="Location" href="https://www.openstreetmap.org/relation/65606", class="hover:underline")
             +bioitem
               +bioicon(class="bg-orange-500 group-hover:bg-orange-400")
                 include ../node_modules/heroicons/24/outline/map-pin.svg
               +biotext
                 span London, UK
-          a(href="mailto:joe@sigwinch.uk", class="hover:underline") 
+          a(title="Email" href="mailto:joe@sigwinch.uk", class="hover:underline") 
             +bioitem
               +bioicon(class="bg-blue-500 group-hover:bg-blue-400")
                 include ../node_modules/heroicons/24/outline/at-symbol.svg
               +biotext
                 span joe@sigwinch.uk
-          a(href="https://github.com/sigwinch28", class="hover:underline") 
+          a(title="GitHub" href="https://github.com/sigwinch28", class="hover:underline") 
             +bioitem
               +bioicon(class="bg-yellow-400 group-hover:bg-yellow-300")
                 include ../node_modules/heroicons/24/outline/code-bracket.svg
               +biotext
                 span sigwinch28
-          a(href="https://keys.openpgp.org/search?q=joe@sigwinch.uk", class="hover:underline") 
+          a(title="PGP Key" href="https://keys.openpgp.org/search?q=joe@sigwinch.uk", class="hover:underline") 
             +bioitem
               +bioicon(class="bg-pink-500 group-hover:bg-pink-400")
                 include ../node_modules/heroicons/24/outline/key.svg
               +biotext
                 span 62F9 CC13 8DD7 1788
+          a(title="Disabilities" href="https://en.wikipedia.org/wiki/Color_blindness#Deuteranopia", class="hover:underline") 
+            +bioitem
+              +bioicon(class="bg-red-500 group-hover:bg-red-400")
+                include ../node_modules/heroicons/24/outline/eye-slash.svg
+              +biotext
+                span Deuteranopia
 
     footer(class="bg-black dark:bg-white text-white dark:text-black selection:text-black selection:bg-white dark:selection:text-white dark:selection:bg-black p-2 lg:p-4")
       p.
