@@ -9,16 +9,16 @@ mixin bioicon(color)
       "red": "from-red-500 to-red-400 group-hover:to-red-300 dark:from-red-600 dark:to-red-500 dark:group-hover:to-red-400",
       "yellow": "from-yellow-500 to-yellow-400 group-hover:to-yellow-300 dark:from-yellow-600 dark:to-yellow-500 dark:group-hover:to-yellow-400",
     };
-  div(class=`transition flex-none w-6 mg:w-10 lg:w-14 rounded-full p-1 lg:p-2 bg-gradient-to-tr ${colors[color]}`)&attributes(attributes)
+  div(class=`transition flex-none w-10 lg:w-14 rounded-full p-1 lg:p-2 bg-gradient-to-tr ${colors[color]}`)&attributes(attributes)
     div(class="group-hover:-rotate-12 transition")
       block
 
 mixin bioitem
-  div(class="flex flex-row items-center gap-2 lg:gap-4 text-base lg:text-xl group")&attributes(attributes)
+  div(class="flex flex-row items-center gap-2 lg:gap-4 group")&attributes(attributes)
     block
 
 mixin biotext
-  div(class="flex-none inline-block text-bold text-base md:text-lg lg:text-2xl")
+  div(class="flex-initial inline-block text-bold text-xl lg:text-2xl")
     block
 
 mixin bio
@@ -39,7 +39,7 @@ html(lang="en")
           h1(class="text-6xl") Joe Harrison
           div(class="relative w-12 transition duration-500 opacity-0 group-hover:opacity-100")
             div(class="w-12 absolute bottom-0 text-blue-400 opacity-70 group-hover:animate-[1s_ping_100ms_ease-in-out_1]", title="This website is verified because it's subscribed to HTTP Blue.")
-                include ../node_modules/heroicons/24/solid/check-badge.svg
+              include ../node_modules/heroicons/24/solid/check-badge.svg
             div(class="w-12 absolute bottom-0 text-blue-400", title="This website is verified because it's subscribed to HTTP Blue.")
               include ../node_modules/heroicons/24/solid/check-badge.svg
             
