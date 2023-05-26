@@ -1,5 +1,15 @@
 mixin bioicon(color)
-  div(class=`transition flex-none w-6 mg:w-10 lg:w-14 rounded-full p-1 lg:p-2 bg-gradient-to-tr from-${color}-500 to-${color}-400 group-hover:to-${color}-300 dark:from-${color}-600 dark:to-${color}-500 dark:group-hover:to-${color}-400`)&attributes(attributes)
+  -
+    var colors = {
+      "blue": "from-blue-500 to-blue-400 group-hover:to-blue-300 dark:from-blue-600 dark:to-blue-500 dark:group-hover:to-blue-400",
+      "fuchsia": "from-fuchsia-500 to-fuchsia-400 group-hover:to-fuchsia-300 dark:from-fuchsia-600 dark:to-fuchsia-500 dark:group-hover:to-fuchsia-400",
+      "green": "from-green-500 to-green-400 group-hover:to-green-300 dark:from-green-600 dark:to-green-500 dark:group-hover:to-green-400",
+      "orange": "from-orange-500 to-orange-400 group-hover:to-orange-300 dark:from-orange-600 dark:to-orange-500 dark:group-hover:to-orange-400",
+      "pink": "from-pink-500 to-pink-400 group-hover:to-pink-300 dark:from-pink-600 dark:to-pink-500 dark:group-hover:to-pink-400",
+      "red": "from-red-500 to-red-400 group-hover:to-red-300 dark:from-red-600 dark:to-red-500 dark:group-hover:to-red-400",
+      "yellow": "from-yellow-500 to-yellow-400 group-hover:to-yellow-300 dark:from-yellow-600 dark:to-yellow-500 dark:group-hover:to-yellow-400",
+    };
+  div(class=`transition flex-none w-6 mg:w-10 lg:w-14 rounded-full p-1 lg:p-2 bg-gradient-to-tr ${colors[color]}`)&attributes(attributes)
     block
 
 mixin bioitem
