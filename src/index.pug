@@ -10,7 +10,8 @@ mixin bioicon(color)
       "yellow": "from-yellow-500 to-yellow-400 group-hover:to-yellow-300 dark:from-yellow-600 dark:to-yellow-500 dark:group-hover:to-yellow-400",
     };
   div(class=`transition flex-none w-6 mg:w-10 lg:w-14 rounded-full p-1 lg:p-2 bg-gradient-to-tr ${colors[color]}`)&attributes(attributes)
-    block
+    div(class="group-hover:-rotate-12 transition")
+      block
 
 mixin bioitem
   div(class="flex flex-row items-center gap-2 lg:gap-4 text-base lg:text-xl group")&attributes(attributes)
@@ -37,8 +38,11 @@ html(lang="en")
         div(class="inline-flex gap-2 content-end group")
           h1(class="text-6xl") Joe Harrison
           div(class="relative w-12 transition duration-500 opacity-0 group-hover:opacity-100")
+            div(class="w-12 absolute bottom-0 text-blue-400 opacity-70 group-hover:animate-[1s_ping_100ms_ease-in-out_1]", title="This website is verified because it's subscribed to HTTP Blue.")
+                include ../node_modules/heroicons/24/solid/check-badge.svg
             div(class="w-12 absolute bottom-0 text-blue-400", title="This website is verified because it's subscribed to HTTP Blue.")
               include ../node_modules/heroicons/24/solid/check-badge.svg
+            
         h2(class="text-4xl") Functional Programmer, Software Engineer, Train Nerd
       div(class="px-4 pb-4")
         +bio
