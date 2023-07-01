@@ -1,6 +1,7 @@
 mixin bioicon(color)
   -
     var colors = {
+      "lime": "from-lime-500 to-lime-400 group-hover:to-lime-300 dark:from-lime-600 dark:to-lime-500 dark:group-hover:to-lime-400",
       "blue": "from-blue-500 to-blue-400 group-hover:to-blue-300 dark:from-blue-600 dark:to-blue-500 dark:group-hover:to-blue-400",
       "fuchsia": "from-fuchsia-500 to-fuchsia-400 group-hover:to-fuchsia-300 dark:from-fuchsia-600 dark:to-fuchsia-500 dark:group-hover:to-fuchsia-400",
       "green": "from-green-500 to-green-400 group-hover:to-green-300 dark:from-green-600 dark:to-green-500 dark:group-hover:to-green-400",
@@ -64,26 +65,32 @@ html(lang="en")
                 include ../node_modules/heroicons/24/outline/at-symbol.svg
               +biotext
                 span joe@sigwinch.uk
-          a(title="GitHub" href="https://github.com/sigwinch28", class="hover:underline") 
+          a(title="Matrix" href="https://matrix.to/#/@joe:sigwinch.uk", class="hover:underline") 
             +bioitem
               +bioicon("yellow")
+                include ../node_modules/heroicons/24/outline/chat-bubble-oval-left-ellipsis.svg
+              +biotext
+                span @joe:sigwinch.uk
+          a(title="GitHub" href="https://github.com/sigwinch28", class="hover:underline") 
+            +bioitem
+              +bioicon("pink")
                 include ../node_modules/heroicons/24/outline/code-bracket.svg
               +biotext
                 span sigwinch28
           a(title="PGP Key" href="https://keys.openpgp.org/search?q=joe@sigwinch.uk", class="hover:underline") 
             +bioitem
-              +bioicon("pink")
+              +bioicon("red")
                 include ../node_modules/heroicons/24/outline/key.svg
               +biotext
                 span 62F9 CC13 8DD7 1788
           a(title="Disabilities" href="https://en.wikipedia.org/wiki/Color_blindness#Red%E2%80%93green_color_blindness", class="hover:underline") 
             +bioitem
-              +bioicon("red")
+              +bioicon("fuchsia")
                 include ../node_modules/heroicons/24/outline/eye-slash.svg
               +biotext
                 span Deutan
           +bioitem(title="Qualifications")
-            +bioicon("fuchsia")
+            +bioicon("lime")
               include ../node_modules/heroicons/24/outline/academic-cap.svg
             +biotext
               span PhD &amp; BSc in Computer Science, University of Kent
