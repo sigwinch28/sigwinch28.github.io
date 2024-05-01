@@ -1,8 +1,8 @@
 build:
-    yarn parcel build --public-url ./ src/index.pug 
+    pnpm run build
 
 install:
-    yarn install --frozen-lockfile
+    pnpm install
 
-watch:
-    yarn parcel serve src/index.pug
+dev:
+    pnpm run dev
