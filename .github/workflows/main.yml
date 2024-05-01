@@ -27,10 +27,8 @@ jobs:
         with:
           node-version: "20"
       - uses: pnpm/action-setup@v3
-      - name: Get pnpm store directory
-        id: pnpm-env
-        run: |
-          echo "store-path=$(pnpm store path --silent)" >> $GITHUB_OUTPUT
+      - id: pnpm-env
+        run: echo "store-path=$(pnpm store path --silent)" >> $GITHUB_OUTPUT
       - uses: actions/cache@v4
         with:
           path: ${{ steps.pnpm-env.outputs.store-path }}
@@ -38,12 +36,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
       - uses: extractions/setup-just@v2
-      - name: Install dependencies
-        run: just install
-      - name: Build
-        run: just build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - run: echo "GITHUB_SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+      - run: just install
+      - run: just build
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
