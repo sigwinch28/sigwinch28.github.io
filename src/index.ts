@@ -17,7 +17,7 @@ const getFateValue = (): FateValue | undefined => {
 
 const banner = document.getElementById("annoying-banner");
 const acceptButton = document.getElementById("accept-fate");
-const invisibleClassName = "invisible";
+const invisibleClassName = "hidden";
 
 const showBanner = () => {
   acceptButton?.addEventListener("click", acceptFate, { once: true });

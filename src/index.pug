@@ -36,35 +36,35 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Joe Harrison
   body(class="dark:bg-black bg-white")
+    div(id="annoying-banner" class="hidden bg-gradient-to-t from-red-800 to-red-500 p-6 text-white")
+      p.
+        Our three Morai partners (Clotho, Lachesis, and Atropos) request your permission to be your personifications of destiny.
+
+        The role of the Moirai is to ensure that you live out your destiny as it was assigned to you by the laws of the universe.
+        For you, this destiny spans your entire entire life and will be represented as a thread spun from a spindle.
+        Generally, the Morai are considered to be above even the gods in their role as enforcers of fate, although in some representations, Zeus, the chief of the gods, is able to command them.
+
+        The fates, being above even the gods, may use your personal data.
+      ul(class="list-disc list-inside")
+        li  <em>Clotho</em> has already spun the thread of your life from her distaff onto her spindle.
+        li  <em>Lachesis</em> requests your permission to measure the thread of your life with her measuring rod.
+        li  <em>Atropos</em> requests your permission to cut the thread of your life.
+
+      div(class="w-full py-4 text-2xl")
+        button(id="accept-fate" class="bg-gradient-to-t from-red-200 to-red-100 hover:from-red-100 hover:to-white text-black p-4 w-full").
+          🔥 Accept the life the fates have chosen for you 🔥
+
+      p(class="text-sm").
+        By clicking "Accept", you accept the life the three fates have chosen for you.
+        Additionally, you agree that the acceptance of your fate will be stored in your local browser storage.
+        You can manage your preferences, including revoking your consent, by contacting our data controller Zeus or any other diety who has power over the three fates.
+        If Zeus or other dieties are not available, you should clear your browser storage for this website.
+        Your fate settings are site-specific and can be altered anytime.
+        See ancient Greek mythology for more details, including terms and conditions.
+        <!-- hey there :^) -->
+  
     main(class="min-h-screen min-w-screen box-border pt-8 dark:text-white selection:text-white selection:bg-black dark:selection:text-black dark:selection:bg-white")   
-      div(id="annoying-banner" class="invisible fixed left-0 bottom-0 right-0 bg-gradient-to-t from-red-800 to-red-500 p-6 text-white")
-        p.
-          Our three Morai partners (Clotho, Lachesis, and Atropos) request your permission to be your personifications of destiny.
-
-          The role of the Moirai is to ensure that you live out your destiny as it was assigned to you by the laws of the universe.
-          For you, this destiny spans your entire entire life and will be represented as a thread spun from a spindle.
-          Generally, the Morai are considered to be above even the gods in their role as enforcers of fate, although in some representations, Zeus, the chief of the gods, is able to command them.
-
-          The fates, being above even the gods, may use your personal data.
-        ul(class="list-disc list-inside")
-          li  <em>Clotho</em> has already spun the thread of your life from her distaff onto her spindle.
-          li  <em>Lachesis</em> requests your permission to measure the thread of your life with her measuring rod.
-          li  <em>Atropos</em> requests your permission to cut the thread of your life.
-
-        div(class="w-full py-4 text-2xl")
-          button(id="accept-fate" class="bg-gradient-to-t from-red-200 to-red-100 hover:from-red-100 hover:to-white text-black p-4 w-full").
-            🔥 Accept the life the fates have chosen for you 🔥
-
-        p(class="text-sm").
-          By clicking "Accept", you accept the life the three fates have chosen for you.
-          Additionally, you agree that the acceptance of your fate will be stored in your local browser storage.
-          You can manage your preferences, including revoking your consent, by contacting our data controller Zeus or any other diety who has power over the three fates.
-          If Zeus or other dieties are not available, you should clear your browser storage for this website.
-          Your fate settings are site-specific and can be altered anytime.
-          See ancient Greek mythology for more details, including terms and conditions.
-          <!-- hey there :^) -->
-
-
+    
       div(id="rule" class="w-full h-1 bg-gradient-to-r from-black dark:from-white via-yellow-500 dark:via-yellow-400 to-black dark:to-white bg-[size:200%]")
       header(class="px-4 pb-4 font-bold")
         div(class="inline-flex gap-2 content-end group")
@@ -145,4 +145,5 @@ html(lang="en")
               git commit <code>#{gha.commit}</code>
         p.
           last modified #{page.date.toUTCString()}
-  script(src="index.js")
+
+    script(src="index.js")
