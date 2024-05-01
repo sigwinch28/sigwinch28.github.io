@@ -136,14 +136,18 @@ html(lang="en")
       p.
         Made with child-like whimsy at 2am on a Macbook.
       div(class="text-sm text-right text-gray-600 hover:text-white dark:text-gray-200 dark:hover:text-black")
-        if gha
-          p
-            a(class="hover:underline" href="#{gha.run_url}").
-              build <code>#{gha.run_id}</code>
-            | 
-            a(class="hover:underline" href="#{gha.commit_tree_url}").
-              git commit <code>#{gha.commit}</code>
-        p.
-          last modified #{page.date.toUTCString()}
+        p
+          if gha
+            a(class="hover:underline" href=gha.run_url)
+              | build
+              |
+              code= gha.run_id
+            br
+            a(class="hover:underline" href=gha.commit_tree_url)
+              | git commit 
+              |
+              code= gha.commit
+            br
+        | last modified #{page.date.toDateString()}
 
     script(src="index.js")
