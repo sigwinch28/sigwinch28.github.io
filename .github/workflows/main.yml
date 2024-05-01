@@ -36,7 +36,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
       - uses: extractions/setup-just@v2
-      - run: echo "GITHUB_SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+      - run: echo "GITHUB_SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
       - run: just install
       - run: just build
       - uses: actions/upload-pages-artifact@v3
