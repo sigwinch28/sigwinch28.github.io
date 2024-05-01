@@ -1,16 +1,16 @@
 mixin bioicon(color)
   -
     var colors = {
-      "lime": "from-lime-500 to-lime-400 group-hover:to-lime-300 dark:from-lime-600 dark:to-lime-500 dark:group-hover:to-lime-400",
-      "blue": "from-blue-500 to-blue-400 group-hover:to-blue-300 dark:from-blue-600 dark:to-blue-500 dark:group-hover:to-blue-400",
-      "fuchsia": "from-fuchsia-500 to-fuchsia-400 group-hover:to-fuchsia-300 dark:from-fuchsia-600 dark:to-fuchsia-500 dark:group-hover:to-fuchsia-400",
-      "green": "from-green-500 to-green-400 group-hover:to-green-300 dark:from-green-600 dark:to-green-500 dark:group-hover:to-green-400",
-      "orange": "from-orange-500 to-orange-400 group-hover:to-orange-300 dark:from-orange-600 dark:to-orange-500 dark:group-hover:to-orange-400",
-      "pink": "from-pink-500 to-pink-400 group-hover:to-pink-300 dark:from-pink-600 dark:to-pink-500 dark:group-hover:to-pink-400",
-      "red": "from-red-500 to-red-400 group-hover:to-red-300 dark:from-red-600 dark:to-red-500 dark:group-hover:to-red-400",
-      "yellow": "from-yellow-500 to-yellow-400 group-hover:to-yellow-300 dark:from-yellow-600 dark:to-yellow-500 dark:group-hover:to-yellow-400",
+      "lime": "bg-lime-500 group-hover:bg-lime-400 dark:bg-lime-600 dark:group-hover:bg-lime-400",
+      "blue": "bg-blue-500 group-hover:bg-blue-300 dark:bg-blue-600 dark:group-hover:bg-blue-400",
+      "fuchsia": "bg-fuchsia-500 group-hover:bg-fuchsia-300 dark:bg-fuchsia-600 dark:group-hover:bg-fuchsia-400",
+      "green": "bg-green-500 group-hover:bg-green-300 dark:bg-green-600 dark:group-hover:bg-green-400",
+      "orange": "bg-orange-500 group-hover:bg-orange-300 bg:from-orange-600 dark:group-hover:bg-orange-400",
+      "pink": "bg-pink-500 group-hover:bg-pink-300 dark:bg-pink-600 dark:group-hover:bg-pink-400",
+      "red": "bg-red-500 group-hover:bg-red-300 dark:bg-red-600 dark:group-hover:bg-red-400",
+      "yellow": "bg-yellow-500 group-hover:bg-yellow-300 dark:bg-yellow-600 dark:group-hover:bg-yellow-400",
     };
-  div(class=`transition flex-none w-10 lg:w-14 rounded-full p-1 lg:p-2 bg-gradient-to-tr ${colors[color]}`)&attributes(attributes)
+  div(class=`transition flex-none w-10 lg:w-14 rounded-full p-1.5 lg:p-2 ${colors[color]}`)&attributes(attributes)
     div(class="group-hover:-rotate-12 transition")
       block
 
@@ -34,7 +34,7 @@ html(lang="en")
     title Joe Harrison
   body(class="dark:bg-black bg-white")
     main(class="min-h-screen min-w-screen box-border pt-8 dark:text-white selection:text-white selection:bg-black dark:selection:text-black dark:selection:bg-white")   
-      div(id="rule" class="w-full h-1 bg-gradient-to-r from-indigo-500 dark:from-indigo-400 via-yellow-500 dark:via-yellow-400 to-indigo-500 dark:to-indigo-400 bg-[size:200%]")
+      div(id="rule" class="w-full h-1 bg-gradient-to-r from-black dark:from-white via-yellow-500 dark:via-yellow-400 to-black dark:to-white bg-[size:200%]")
       header(class="px-4 pb-4 font-bold")
         div(class="inline-flex gap-2 content-end group")
           h1(class="text-6xl") Joe Harrison
@@ -61,19 +61,19 @@ html(lang="en")
                 span London, UK
           a(title="Email" href="mailto:joe@sigwinch.uk", class="hover:underline") 
             +bioitem
-              +bioicon("blue")
+              +bioicon("yellow")
                 include ../node_modules/heroicons/24/outline/at-symbol.svg
               +biotext
                 span joe@sigwinch.uk
-          a(title="Matrix" href="https://matrix.to/#/@joe:sigwinch.uk", class="hover:underline") 
-            +bioitem
-              +bioicon("yellow")
-                include ../node_modules/heroicons/24/outline/chat-bubble-oval-left-ellipsis.svg
-              +biotext
-                span @joe:sigwinch.uk
+          //- a(title="Matrix" href="https://matrix.to/#/@joe:sigwinch.uk", class="hover:underline") 
+          //-   +bioitem
+          //-     +bioicon("yellow")
+          //-       include ../node_modules/heroicons/24/outline/chat-bubble-oval-left-ellipsis.svg
+          //-     +biotext
+          //-       span @joe:sigwinch.uk
           a(title="GitHub" href="https://github.com/sigwinch28", class="hover:underline") 
             +bioitem
-              +bioicon("pink")
+              +bioicon("blue")
                 include ../node_modules/heroicons/24/outline/code-bracket.svg
               +biotext
                 span sigwinch28
@@ -99,8 +99,4 @@ html(lang="en")
       p.
         🚇 Inspired by the design of New York City Subway signs.
       p.
-        🖥️ Written in Pug. 🎨 Styled with Tailwind CSS. 🚇 Icons by Heroicons. 📦 Bundled with Parcel.
-      p(class="block dark:hidden").
-        ☀️ Viewing in light mode.
-      p(class="hidden dark:block").
-        🌙 Viewing in dark mode.
+        🖥️ Written in Pug. 🎨 Styled with Tailwind CSS. 🚇 Icons by Heroicons. 📦 Bundled with 11ty.
