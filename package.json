@@ -1,6 +1,8 @@
 {
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.4.17",
     "heroicons": "^2.1.3",
     "npm-run-all": "^4.1.5",
     "tailwindcss": "^3.4.3"
@@ -8,10 +10,12 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
     "dev:eleventy": "eleventy --serve",
-    "dev:parcel": "tailwindcss -i src/style.css -o dist/style.css --watch",
+    "dev:tailwind": "tailwindcss -i src/style.css -o dist/style.css --watch",
+    "dev:swc": "swc src/index.ts -o dist/index.js --watch",
     "build": "run-s build:*",
-    "build:eleventy": "ELEVENTY_ENV=production eleventy",
-    "build:parcel": "tailwindcss -i src/style.css -o dist/style.css"
+    "build:eleventy": "eleventy",
+    "build:tailwind": "tailwindcss -i src/style.css -o dist/style.css",
+    "build:swc": "swc src/index.ts -o dist/index.js"
   },
   "packageManager": "pnpm@9.0.6+sha512.f6d863130973207cb7a336d6b439a242a26ac8068077df530d6a86069419853dc1ffe64029ec594a9c505a3a410d19643c870aba6776330f5cfddcf10a9c1617"
 }

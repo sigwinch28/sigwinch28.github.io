@@ -37,7 +37,7 @@ html(lang="en")
     title Joe Harrison
   body(class="dark:bg-black bg-white")
     main(class="min-h-screen min-w-screen box-border pt-8 dark:text-white selection:text-white selection:bg-black dark:selection:text-black dark:selection:bg-white")   
-      div(id="annoying-banner" class="invisible fixed left-0 bottom-0 right-0 bg-red-700 p-4 text-white")
+      div(id="annoying-banner" class="invisible fixed left-0 bottom-0 right-0 bg-gradient-to-t from-red-800 to-red-500 p-6 text-white")
         p.
           Our three Morai partners (Clotho, Lachesis, and Atropos) request your permission to be your personifications of destiny.
 
@@ -47,13 +47,13 @@ html(lang="en")
 
           The fates, being above even the gods, may use your personal data.
         ul(class="list-disc list-inside")
-          li  <em>Clotho</em> requests your permission to spin the thread of your life from her distaff onto her spindle. 
+          li  <em>Clotho</em> has already spun the thread of your life from her distaff onto her spindle.
           li  <em>Lachesis</em> requests your permission to measure the thread of your life with her measuring rod.
           li  <em>Atropos</em> requests your permission to cut the thread of your life.
 
         div(class="w-full py-4 text-2xl")
-          button(id="accept-fate" class="bg-white text-black hover:bg-black hover:text-white p-4 w-full").
-            ⚡ Accept the life the fates have chosen for you ⚡
+          button(id="accept-fate" class="bg-gradient-to-t from-red-200 to-red-100 hover:from-red-100 hover:to-white text-black p-4 w-full").
+            🔥 Accept the life the fates have chosen for you 🔥
 
         p(class="text-sm").
           By clicking "Accept", you accept the life the three fates have chosen for you.
@@ -145,44 +145,4 @@ html(lang="en")
               git commit <code>#{gha.commit}</code>
         p.
           last modified #{page.date.toUTCString()}
-
-  script.
-    const storageKey = 'fate'; 
-    const fateTemptedValue = 'tempted';
-    const fateAcceptedValue = 'accepted';
-
-    const banner = document.getElementById('annoying-banner');
-    const acceptButton = document.getElementById('accept-fate');
-    const invisibleClassName = "invisible";
-
-    const showBanner = () => {
-      acceptButton.addEventListener('click', acceptFate, {once: true});
-      banner.classList.remove(invisibleClassName);
-    }
-
-    const hideBanner = () => {
-      banner.classList.add(invisibleClassName);
-      acceptButton.removeEventListener('click', acceptFate);
-    }
-
-    const temptFate = () => {
-      localStorage.setItem(storageKey, fateTemptedValue);
-      showBanner();
-    }
-
-    const acceptFate = () => {
-      localStorage.setItem(storageKey, fateAcceptedValue);
-      hideBanner();
-    }
-
- 
-    // listen for clicks on tempt-fate button
-    document.getElementById("tempt-fate").addEventListener("click", () => {
-      localStorage.setItem(storageKey, fateTemptedValue);
-      showBanner();
-    })
-
-    // people who have tempted fate previously and who have not accepted it must face the three fates.
-    if (localStorage.getItem(storageKey) == fateTemptedValue) {
-      showBanner()
-    }
+  script(src="index.js")
