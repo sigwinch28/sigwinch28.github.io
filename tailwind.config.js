@@ -8,7 +8,7 @@ module.exports = {
     },
     extend: {
       animation: {
-        'pulse-full': 'pulse-full 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;'
+        'pulse-full': 'pulse-full 2s cubic-bezier(0.4, 0, 1, 0.6) infinite;'
       }
     },
   },

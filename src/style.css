@@ -7,10 +7,10 @@
 
 
 @keyframes pulse-full {
-  12.5%, 50% {
+  0% {
     opacity: 1;
   }
-  0%, 100% {
+  100% {
     opacity: 0;
   }
 }

@@ -35,19 +35,22 @@ html(lang="en")
     link(rel="stylesheet", href="style.css")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title sigwinch(28)
-  body(class="dark:bg-black bg-white")
+  body(class="dark:bg-black bg-white text-black dark:text-white")
   
     main(class="min-h-screen min-w-screen box-border pt-8 dark:text-white selection:text-white selection:bg-black dark:selection:text-black dark:selection:bg-white")   
-      div(class="w-full h-1 bg-gradient-to-r bg-black dark:bg-white bg-[size:200%]")
-      header(class="px-4 pb-4 font-bold bg-gradient-to-r text-black dark:text-white")
+      div(class="w-full h-1 bg-black dark:bg-white")
+      header(class="px-4 pb-4 tracking-widest")
         div(class="inline-flex gap-2 content-end group")
-          h1(class="text-4xl lg:text-6xl uppercase font-bold tracking-widest")
+          h1(class="text-4xl lg:text-6xl uppercase font-bold")
             span sigwinch
-            span(class="text-red-500 animate-pulse-full") (
+            span(class="text-yellow-600 inline-block") [
             span 28
-            span(class="text-red-500 animate-pulse-full") )
+            span(class="text-yellow-600 inline-block") ]
           div(class="relative w-12 transition duration-500 opacity-0 group-hover:opacity-100")
             div(class="w-12 absolute bottom-0 text-blue-400 opacity-70 group-hover:animate-[1s_ping_100ms_ease-in-out_1]", title="This website is verified because it's subscribed to HTTP Blue.")
               include ../node_modules/heroicons/24/solid/check-badge.svg
             div(class="w-12 absolute bottom-0 text-blue-400", title="This website is verified because it's subscribed to HTTP Blue.")
               include ../node_modules/heroicons/24/solid/check-badge.svg
+        h2 special interest group for winches and POSIX signals
+      p(class="px-4 mt-8 text-yellow-600 uppercase")
+        a(class="border-4 border-double rounded border-yellow-600 p-1 before:animate-pulse-full before:content-['▶_'] after:content-['_◀'] after:animate-pulse-full uppercase hover:bg-yellow-600 dark:hover:text-black hover:text-white" href="mailto:joe@sigwinch.uk") open comms
