@@ -34,120 +34,17 @@ html(lang="en")
   head
     link(rel="stylesheet", href="style.css")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Joe Harrison
+    title sigwinch(28)
   body(class="dark:bg-black bg-white")
-    div(id="annoying-banner" class="hidden bg-gradient-to-t from-red-800 to-red-500 p-6 text-white")
-      p.
-        Our three Morai partners (Clotho, Lachesis, and Atropos) request your permission to be your personifications of destiny.
-
-        The role of the Moirai is to ensure that you live out your destiny as it was assigned to you by the laws of the universe.
-        For you, this destiny spans your entire entire life and will be represented as a thread spun from a spindle.
-        Generally, the Morai are considered to be above even the gods in their role as enforcers of fate, although in some representations, Zeus, the chief of the gods, is able to command them.
-
-        The fates, being above even the gods, may use your personal data.
-      ul(class="list-disc list-inside")
-        li  <em>Clotho</em> has already spun the thread of your life from her distaff onto her spindle.
-        li  <em>Lachesis</em> requests your permission to measure the thread of your life with her measuring rod.
-        li  <em>Atropos</em> requests your permission to cut the thread of your life.
-
-      div(class="w-full py-4 text-2xl")
-        button(id="accept-fate" class="bg-gradient-to-t from-red-200 to-red-100 hover:from-red-100 hover:to-white text-black p-4 w-full").
-          🔥 Accept the life the fates have chosen for you 🔥
-
-      p(class="text-sm").
-        By clicking "Accept", you accept the life the three fates have chosen for you.
-        Additionally, you agree that the acceptance of your fate will be stored in your local browser storage.
-        You can manage your preferences, including revoking your consent, by contacting our data controller Zeus or any other diety who has power over the three fates.
-        If Zeus or other dieties are not available, you should clear your browser storage for this website.
-        Your fate settings are site-specific and can be altered anytime.
-        See ancient Greek mythology for more details, including terms and conditions.
-        <!-- hey there :^) -->
   
     main(class="min-h-screen min-w-screen box-border pt-8 dark:text-white selection:text-white selection:bg-black dark:selection:text-black dark:selection:bg-white")   
       div(class="w-full h-1 bg-gradient-to-r bg-black dark:bg-white bg-[size:200%]")
-      header(class="px-4 pb-4 font-bold bg-gradient-to-r from-yellow-600  to-black dark:from-yellow-200 to-20% dark:to-white text-transparent bg-clip-text")
+      header(class="px-4 pb-4 font-bold bg-gradient-to-r text-black dark:text-white")
         div(class="inline-flex gap-2 content-end group")
-          h1(class="text-6xl") Joe Harrison
+          h1(class="text-4xl lg:text-6xl uppercase font-bold tracking-wider")
+            span(class="after:content-['▲'] after:text-red-500 after:animate-pulse-full") sigwinch(28)
           div(class="relative w-12 transition duration-500 opacity-0 group-hover:opacity-100")
             div(class="w-12 absolute bottom-0 text-blue-400 opacity-70 group-hover:animate-[1s_ping_100ms_ease-in-out_1]", title="This website is verified because it's subscribed to HTTP Blue.")
               include ../node_modules/heroicons/24/solid/check-badge.svg
             div(class="w-12 absolute bottom-0 text-blue-400", title="This website is verified because it's subscribed to HTTP Blue.")
               include ../node_modules/heroicons/24/solid/check-badge.svg
-            
-        h2(class="text-4xl") Functional Programmer, Software Engineer, Train Nerd
-      div(class="px-4 pb-4")
-        +bio
-          a(title="Pronouns" href="https://en.pronouns.page/are/he/him", class="hover:underline")
-            +bioitem
-              +bioicon("green")
-                include ../node_modules/heroicons/24/outline/tag.svg
-              +biotext
-                span he/him
-          a(title="Location" href="https://www.openstreetmap.org/relation/65606", class="hover:underline")
-            +bioitem
-              +bioicon("orange")
-                include ../node_modules/heroicons/24/outline/map-pin.svg
-              +biotext
-                span London, UK
-          a(title="Email" href="mailto:joe@sigwinch.uk", class="hover:underline") 
-            +bioitem
-              +bioicon("yellow")
-                include ../node_modules/heroicons/24/outline/at-symbol.svg
-              +biotext
-                span joe@sigwinch.uk
-          //- a(title="Matrix" href="https://matrix.to/#/@joe:sigwinch.uk", class="hover:underline") 
-          //-   +bioitem
-          //-     +bioicon("yellow")
-          //-       include ../node_modules/heroicons/24/outline/chat-bubble-oval-left-ellipsis.svg
-          //-     +biotext
-          //-       span @joe:sigwinch.uk
-          a(title="GitHub" href="https://github.com/sigwinch28", class="hover:underline") 
-            +bioitem
-              +bioicon("blue")
-                include ../node_modules/heroicons/24/outline/code-bracket.svg
-              +biotext
-                span sigwinch28
-          a(title="PGP Key" href="https://keys.openpgp.org/search?q=joe@sigwinch.uk", class="hover:underline") 
-            +bioitem
-              +bioicon("red")
-                include ../node_modules/heroicons/24/outline/key.svg
-              +biotext
-                span 62F9 CC13 8DD7 1788
-          a(title="Disabilities" href="https://en.wikipedia.org/wiki/Color_blindness#Red%E2%80%93green_color_blindness", class="hover:underline") 
-            +bioitem
-              +bioicon("fuchsia")
-                include ../node_modules/heroicons/24/outline/eye-slash.svg
-              +biotext
-                span Deutan
-          +bioitem(title="Qualifications")
-            +bioicon("lime")
-              include ../node_modules/heroicons/24/outline/academic-cap.svg
-            +biotext
-              span PhD &amp; BSc in Computer Science, University of Kent
-          div
-            button(id="tempt-fate" class="text-gray-100 hover:text-black dark:text-gray-800 dark:hover:text-white hover:underline").
-              Click here to tempt the three fates.
-
-    footer(class="bg-black dark:bg-white text-white dark:text-black selection:text-black selection:bg-white dark:selection:text-white dark:selection:bg-black p-2 lg:p-4 space-y-2")
-      p.
-        🚇 Inspired by the design of New York City Subway signs.
-      p.
-        🖥️ Written in Pug. 🎨 Styled with Tailwind CSS. 🚇 Icons by Heroicons. 📦 Bundled with 11ty.
-      p.
-        Made with child-like whimsy at 2am on a MacBook.
-      div(class="text-sm text-right text-gray-600 hover:text-white dark:text-gray-200 dark:hover:text-black")
-        p
-          if gha
-            a(class="hover:underline" href=gha.run_url)
-              | build
-              |
-              code= gha.run_id
-            br
-            a(class="hover:underline" href=gha.commit_tree_url)
-              | git commit 
-              |
-              code= gha.commit
-            br
-        | last modified #{page.date.toDateString()}
-
-    script(src="index.js")

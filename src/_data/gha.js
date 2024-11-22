@@ -11,4 +11,11 @@ module.exports = function () {
             commit_tree_url: sha_tree_url,
         };
     }
+
+    return {
+        run_id: "dev",
+        run_url: "https://localhost:8080/dev",
+        commit: "unknown",
+        commit_tree_url: "https://localhost:8080/unknown"
+    }
 };

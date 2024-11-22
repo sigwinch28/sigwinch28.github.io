@@ -11,6 +11,9 @@ importers:
       '@11ty/eleventy':
         specifier: ^2.0.1
         version: 2.0.1
+      '@fontsource/orbitron':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@swc/cli':
         specifier: ^0.3.12
         version: 0.3.12(@swc/core@1.4.17)(chokidar@3.6.0)
@@ -70,6 +73,9 @@ packages:
   '@babel/types@7.24.5':
     resolution: {integrity: sha512-6mQNsaLeXTw0nxYUYu+NSa4Hx4BlF1x1x8/PMFbiR+GBSr+2DkECc69b8hgy2frEodNcvPffeH8YfWd3LI6jhQ==}
     engines: {node: '>=6.9.0'}
+
+  '@fontsource/orbitron@5.1.0':
+    resolution: {integrity: sha512-P2OhlojgR+yVVoZPhDvKixHiWnQdERTlmfbss9OLeSxX+ZdJGdpqoIrDQuID6wD9RlHaW1Qgyot0PBjTtnybVg==}
 
   '@iarna/toml@2.2.5':
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
@@ -1916,6 +1922,8 @@ snapshots:
       '@babel/helper-string-parser': 7.24.1
       '@babel/helper-validator-identifier': 7.24.5
       to-fast-properties: 2.0.0
+
+  '@fontsource/orbitron@5.1.0': {}
 
   '@iarna/toml@2.2.5': {}
 
