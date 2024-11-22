@@ -41,8 +41,11 @@ html(lang="en")
       div(class="w-full h-1 bg-gradient-to-r bg-black dark:bg-white bg-[size:200%]")
       header(class="px-4 pb-4 font-bold bg-gradient-to-r text-black dark:text-white")
         div(class="inline-flex gap-2 content-end group")
-          h1(class="text-4xl lg:text-6xl uppercase font-bold tracking-wider")
-            span(class="after:content-['▲'] after:text-red-500 after:animate-pulse-full") sigwinch(28)
+          h1(class="text-4xl lg:text-6xl uppercase font-bold tracking-widest")
+            span sigwinch
+            span(class="text-red-500 animate-pulse-full") (
+            span 28
+            span(class="text-red-500 animate-pulse-full") )
           div(class="relative w-12 transition duration-500 opacity-0 group-hover:opacity-100")
             div(class="w-12 absolute bottom-0 text-blue-400 opacity-70 group-hover:animate-[1s_ping_100ms_ease-in-out_1]", title="This website is verified because it's subscribed to HTTP Blue.")
               include ../node_modules/heroicons/24/solid/check-badge.svg
