@@ -1,56 +1,24 @@
 ---
 date: git Last Modified
 ---
-mixin bioicon(color)
-  -
-    var colors = {
-      "lime": "bg-lime-500 group-hover:bg-lime-400 dark:bg-lime-600 dark:group-hover:bg-lime-400",
-      "blue": "bg-blue-500 group-hover:bg-blue-300 dark:bg-blue-600 dark:group-hover:bg-blue-400",
-      "fuchsia": "bg-fuchsia-500 group-hover:bg-fuchsia-300 dark:bg-fuchsia-600 dark:group-hover:bg-fuchsia-400",
-      "green": "bg-green-500 group-hover:bg-green-300 dark:bg-green-600 dark:group-hover:bg-green-400",
-      "orange": "bg-orange-500 group-hover:bg-orange-300 bg:from-orange-600 dark:group-hover:bg-orange-400",
-      "pink": "bg-pink-500 group-hover:bg-pink-300 dark:bg-pink-600 dark:group-hover:bg-pink-400",
-      "red": "bg-red-500 group-hover:bg-red-300 dark:bg-red-600 dark:group-hover:bg-red-400",
-      "yellow": "bg-yellow-500 group-hover:bg-yellow-300 dark:bg-yellow-600 dark:group-hover:bg-yellow-400",
-    };
-  div(class=`transition flex-none w-10 lg:w-14 rounded-full p-1.5 lg:p-2 ${colors[color]}`)&attributes(attributes)
-    div(class="group-hover:-rotate-12 transition")
-      block
-
-mixin bioitem
-  div(class="flex flex-row items-center gap-2 lg:gap-4 group")&attributes(attributes)
-    block
-
-mixin biotext
-  div(class="flex-initial inline-block text-bold text-xl lg:text-2xl")
-    block
-
-mixin bio
-  section(id="bio", class="flex flex-col items-start gap-2 lg:gap-4")
-    block
-
 doctype html
 html(lang="en")
   head
     link(rel="stylesheet", href="style.css")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title sigwinch(28)
-  body(class="dark:bg-black bg-white text-black dark:text-white")
-  
-    main(class="min-h-screen min-w-screen box-border pt-8 dark:text-white selection:text-white selection:bg-black dark:selection:text-black dark:selection:bg-white")   
-      div(class="w-full h-1 bg-black dark:bg-white")
-      header(class="px-4 pb-4 tracking-widest")
-        div(class="inline-flex gap-2 content-end group")
-          h1(class="text-4xl lg:text-6xl uppercase font-bold")
-            span sigwinch
-            span(class="text-yellow-600 inline-block") [
-            span 28
-            span(class="text-yellow-600 inline-block") ]
-          div(class="relative w-12 transition duration-500 opacity-0 group-hover:opacity-100")
-            div(class="w-12 absolute bottom-0 text-blue-400 opacity-70 group-hover:animate-[1s_ping_100ms_ease-in-out_1]", title="This website is verified because it's subscribed to HTTP Blue.")
-              include ../node_modules/heroicons/24/solid/check-badge.svg
-            div(class="w-12 absolute bottom-0 text-blue-400", title="This website is verified because it's subscribed to HTTP Blue.")
-              include ../node_modules/heroicons/24/solid/check-badge.svg
-        h2 special interest group for winches and POSIX signals
-      p(class="px-4 mt-8 text-yellow-600 uppercase")
-        a(class="border-4 border-double rounded border-yellow-600 p-1 before:animate-pulse-full before:content-['▶_'] after:content-['_◀'] after:animate-pulse-full uppercase hover:bg-yellow-600 dark:hover:text-black hover:text-white" href="mailto:joe@sigwinch.uk") open comms
+  body(class="bg-black text-white font-mono")
+    main(class="min-h-screen min-w-screen box-border pt-8 text-white selection:bg-yellow-600")   
+      div(class="w-full h-1 bg-yellow-600 rotate-1")
+      header(class="px-4 py-4")
+        h1(class="text-4xl lg:text-6xl lowercase")
+          span sigwinch
+          span(class="text-yellow-600 inline-block") (
+          span 28
+          span(class="text-yellow-600 inline-block") )
+          span
+        h2(class="pt-4") special interest group for winches and POSIX signals
+      p(class="px-4 py-4 text-yellow-600 uppercase")
+        a(class="p-1 before:animate-pulse-full before:content-['>_'] after:content-['_<'] after:animate-pulse-full hover:bg-yellow-600 dark:hover:text-black hover:text-white" href="mailto:joe@sigwinch.uk") open comms
+
+ 
