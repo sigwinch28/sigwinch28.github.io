@@ -9,16 +9,19 @@ html(lang="en")
     title sigwinch(28)
   body(class="bg-black text-white font-mono")
     main(class="min-h-screen min-w-screen box-border pt-8 text-white selection:bg-yellow-600")   
-      div(class="w-full h-1 bg-yellow-600 rotate-1")
+      div(class="w-full h-2 bg-yellow-600")
       header(class="px-4 py-4")
-        h1(class="text-4xl lg:text-6xl lowercase")
+        h1(class="text-4xl lg:text-6xl uppercase")
           span sigwinch
           span(class="text-yellow-600 inline-block") (
           span 28
           span(class="text-yellow-600 inline-block") )
           span
         h2(class="pt-4") special interest group for winches and POSIX signals
-      p(class="px-4 py-4 text-yellow-600 uppercase")
-        a(class="p-1 before:animate-pulse-full before:content-['>_'] after:content-['_<'] after:animate-pulse-full hover:bg-yellow-600 dark:hover:text-black hover:text-white" href="mailto:joe@sigwinch.uk") open comms
+      div(class="px-4 py-4 text-yellow-600 uppercase flex flex-row")
+        div(class="animate-pulse-full") >>
+        a(href="mailto:joe@sigwinch.uk")
+          span(class="px-[1ch] hover:bg-yellow-600 hover:text-black") open comms
+        div(class="animate-pulse-full") <<
 
  
