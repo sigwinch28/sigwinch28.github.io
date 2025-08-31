@@ -4,17 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <style>
-        #content {
-            max-width: 80ch;
-            font-family: "Iosevka SS08", monospace;
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
   </head>
-  <body>
-    <div id="bar"></div>
-    <div id="content">
-        {{ content | safe }}
-    </div>
+  <body class="font-mono">
+    <main class="box-border pt-8">
+      <div class="w-full h-2 bg-yellow-600"></div>
+      <div class="max-w-[80ch] prose xl:prose-xl m-2 xl:m-4">
+          {{ content | safe }}
+      </div>
+    </main>
   </body>
 </html>
