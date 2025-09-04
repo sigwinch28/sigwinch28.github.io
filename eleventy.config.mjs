@@ -5,5 +5,6 @@ export default function (eleventyConfig) {
     eleventyConfig.setOutputDirectory("dist");
     eleventyConfig.addPassthroughCopy({ './node_modules/@fontsource-variable/atkinson-hyperlegible-next/files/*.woff2': 'files' });
     eleventyConfig.addPassthroughCopy({ './node_modules/@fontsource-variable/atkinson-hyperlegible-mono/files/*.woff2': 'files' });
+    eleventyConfig.addPassthroughCopy({ './node_modules/@fontsource-variable/bitter/files/*.woff2': 'files' });
     eleventyConfig.addPlugin(pugPlugin);
 };

@@ -1,5 +1,6 @@
 @import '@fontsource-variable/atkinson-hyperlegible-mono';
 @import '@fontsource-variable/atkinson-hyperlegible-next';
+@import '@fontsource-variable/bitter';
 
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
@@ -8,6 +9,7 @@
   --font-*: initial;
   --font-serif: "Atkinson Hyperlegible Next Variable", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; 
   --font-mono: "Atkinson Hyperlegible Mono Variable", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-prose: "Bitter", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; 
   --animate-pulse-full: pulse-full 0.6s cubic-bezier(0, 0, 0.2, 1) infinite alternate;
 }
 

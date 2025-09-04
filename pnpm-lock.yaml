@@ -17,6 +17,9 @@ importers:
       '@fontsource-variable/atkinson-hyperlegible-next':
         specifier: ^5.2.4
         version: 5.2.4
+      '@fontsource-variable/bitter':
+        specifier: ^5.2.8
+        version: 5.2.8
       add:
         specifier: ^2.0.6
         version: 2.0.6
@@ -111,6 +114,9 @@ packages:
 
   '@fontsource-variable/atkinson-hyperlegible-next@5.2.4':
     resolution: {integrity: sha512-tBwEMYA1+QopQI6f/cU3V502aNx0/ewRlpCKndPn4rOOZK/gOOyxRGanxxRlJyOBkwZ9Qx9z4bM39uV1PXbmVg==}
+
+  '@fontsource-variable/bitter@5.2.8':
+    resolution: {integrity: sha512-zDksVRD2g2Z8enfl9Y2vG9Xx0hZMyJifC5bDN5uyfKRLiWki7Spob+OO5Lb38KbnwB9Ocn5UxB6kgFu1m49Gdg==}
 
   '@fontsource/iosevka@5.2.5':
     resolution: {integrity: sha512-Zv/UHJodDug1LcnWv2u2+GPp3oWP3U6Xp16cJOsqqZQNsCu8sA/ttT331N0NypxBZ+7c8szlSRlYDcy9liZ8pw==}
@@ -1571,6 +1577,8 @@ snapshots:
   '@fontsource-variable/atkinson-hyperlegible-mono@5.2.4': {}
 
   '@fontsource-variable/atkinson-hyperlegible-next@5.2.4': {}
+
+  '@fontsource-variable/bitter@5.2.8': {}
 
   '@fontsource/iosevka@5.2.5': {}
 
